@@ -1,6 +1,6 @@
 .main {
   height: 50vh; // fallback
-  height: calc(var(--vh, 1vh) * 50);
+  height: calc(var(--vh, 1vh) * 50); // Use with useMobileScreen hook
   background-color: $white;
 
   .row {
