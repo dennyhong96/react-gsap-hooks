@@ -1,6 +1,6 @@
 import { ReactComponent as RightArrow } from "../assets/arrow-right.svg";
 
-const Banner = () => {
+const Banner = ({ appendsToRef }) => {
   return (
     <section className="main">
       <div className="container">
@@ -8,10 +8,10 @@ const Banner = () => {
           {/* Heading */}
           <h2>
             <div className="line">
-              <span>Creating unique brands is</span>
+              <span ref={appendsToRef}>Creating unique brands is</span>
             </div>
             <div className="line">
-              <span>what we do.</span>
+              <span ref={appendsToRef}>what we do.</span>
             </div>
           </h2>
 

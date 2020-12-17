@@ -8,6 +8,7 @@
 
 body,
 html {
+  visibility: hidden; // Prevent gsap gliching
   user-select: none;
   background: $white;
   overscroll-behavior: none;
