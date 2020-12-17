@@ -1,26 +1,24 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 
+// Appends DOM refs to ref list for gsap stagger effect
+const appendsToRef = (refList) => (el) => {
+  el && !refList.includes(el) && refList.push(el);
+};
+
+// Responsible for Home page animation logic
 const useHomeAnimation = () => {
   const [isAnimationDone, setIsAnimationDone] = useState(false);
   const timelineRef = useRef(gsap.timeline({ defaults: {} }));
   const titleLinesRef = useRef([]);
+  const caseImagesRef = useRef([]);
   const overlayRef = useRef({
     screen: null,
     top: [],
     bottom: [],
   });
-  const caseImagesRef = useRef([]);
-
-  const appendsToRef = (refList) => (el) => {
-    el && !refList.includes(el) && refList.push(el);
-  };
 
   useEffect(() => {
-    console.log("titleLinesRef.current", titleLinesRef.current);
-    console.log("overlayRef.current", overlayRef.current);
-    console.log("appendsToRef.current", caseImagesRef.current);
-
     timelineRef.current
 
       // Reveals title lines
@@ -82,6 +80,7 @@ const useHomeAnimation = () => {
   }, []);
 
   return {
+    // Exposes functions for registering refs and done indicator state
     setsOverlayScreen: (el) => (overlayRef.current.screen = el),
     appendsToOverTop: appendsToRef(overlayRef.current.top),
     appendsToOverlayBottom: appendsToRef(overlayRef.current.bottom),
