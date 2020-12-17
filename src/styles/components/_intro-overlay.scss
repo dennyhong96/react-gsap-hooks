@@ -1,0 +1,81 @@
+.intro-overlay {
+  .top {
+    height: 50vh;
+    height: calc(var(--vh, 1vh) * 50);
+    position: absolute;
+    width: 100%;
+    z-index: 8;
+
+    .overlay-top {
+      position: absolute;
+      height: 100%;
+      width: 33.33333vw;
+      background: $black;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      @include media("<=tablet") {
+        width: 100vw;
+      }
+
+      &:nth-child(2) {
+        left: 33.33333%;
+
+        @include media("<=tablet") {
+          display: none;
+        }
+      }
+
+      &:nth-child(3) {
+        left: 66.66666%;
+
+        @include media("<=tablet") {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    height: 50vh;
+    height: calc(var(--vh, 1vh) * 50);
+    position: absolute;
+    width: 100%;
+    z-index: 8;
+    bottom: 0;
+
+    .overlay-bottom {
+      position: absolute;
+      height: 100%;
+      width: 33.33333vw;
+      background: $black;
+      bottom: 0;
+      right: 66.66666%;
+
+      @include media("<=tablet") {
+        right:0;
+        width: 100vw;
+      }
+
+      &:nth-child(2) {
+        right: 33.33333%;
+
+        @include media("<=tablet") {
+          width: 100%;
+          top:100%;
+          right:0;
+        }
+      }
+
+      &:nth-child(3) {
+        right:0;
+
+        @include media("<=tablet") {
+          width: 100%;
+          top:200%;
+        }
+      }
+    }
+  }
+}
