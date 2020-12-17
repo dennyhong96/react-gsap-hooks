@@ -1,9 +1,7 @@
 import { Fragment } from "react";
 
-import Banner from "../components/Banner";
-import Cases from "../components/Cases";
-import IntroOverlay from "../components/IntroOverlay";
-import useHomeAnimation from "../hooks/animation/useHomeAnimation";
+import { Banner, Cases, IntroOverlay } from "../components";
+import { useHomeAnimation } from "../hooks/animation";
 
 const Home = () => {
   const {
