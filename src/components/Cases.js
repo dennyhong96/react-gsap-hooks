@@ -1,7 +1,7 @@
 import { ReactComponent as LeftArrow } from "../assets/arrow-left.svg";
 import { ReactComponent as RightArrow } from "../assets/arrow-right.svg";
 
-const Cases = ({ appendsToRef }) => {
+const Cases = ({ appendsToCaseImages }) => {
   const caseStudies = [
     {
       id: 1,
@@ -51,7 +51,7 @@ const Cases = ({ appendsToRef }) => {
               {/* Case image */}
               <div className="case-image">
                 <img
-                  ref={appendsToRef}
+                  ref={appendsToCaseImages}
                   src={require(`../assets/${caseItem.img}.png`).default}
                   alt={caseItem.title}
                 />
