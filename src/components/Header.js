@@ -1,3 +1,7 @@
+import { NavLink, useHistory } from "react-router-dom";
+
+import { ReactComponent as UpArrow } from "../assets/up-arrow-circle.svg";
+
 const Header = () => {
   return (
     <div className="header">
@@ -9,9 +13,17 @@ const Header = () => {
           </div>
 
           {/* Hamburget Menu */}
-          <div className="nav">
-            <span></span>
-            <span></span>
+          <div className="nav-toggle">
+            {/* Open Menu */}
+            <div className="hamburger-menu">
+              <span></span>
+              <span></span>
+            </div>
+
+            {/* Close Menu */}
+            <div className="hanburger-menu-close">
+              <UpArrow />
+            </div>
           </div>
         </div>
       </div>

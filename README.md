@@ -1,4 +1,4 @@
-## Use Gsap timeline to animate React sites
+## Use Gsap and custom hooks to animate React sites
 
 #### Snippet: `useHomeAnimation` custom hook:
 
