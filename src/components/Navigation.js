@@ -1,8 +1,13 @@
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 
+import { NavContext } from "../context/NavContext";
+
 const Navigation = () => {
+  const { navRef } = useContext(NavContext);
+
   return (
-    <nav>
+    <nav ref={navRef}>
       <div className="container">
         <div className="nav-columns">
           {/* Left Column Menu */}

@@ -7,7 +7,7 @@ nav {
   overflow: hidden;
   background-color: $yellow;
   z-index: 1;
-  // display: none;
+  display: none;
 
   a {
     position: relative;
@@ -111,6 +111,7 @@ nav {
         .nav-info {
           padding: 0;
           width: 50%;
+
           &:nth-child(2),
           &:nth-child(3) {
             @include media("<=654") {

@@ -7,12 +7,12 @@ import { usePreventFlicker } from "./hooks/animation";
 import { Home, About, Approach, CaseStudies, Services } from "./pages";
 
 function App() {
-  useMobileScreen();
+  const { dimensions } = useMobileScreen();
   usePreventFlicker();
 
   return (
     <Fragment>
-      <Header />
+      <Header dimensions={dimensions} />
       <div className="App">
         <Switch>
           <Route exact path="/" component={Home} />
